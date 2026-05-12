@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>menu</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px 10px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-image: url('images.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            overflow: hidden; /* Щоб не було зайвих смуг прокрутки */
+        }
+
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            display: block; /* Робимо посилання блоком для коректних відступів */
+        }
+
+        .menu-link:hover {
+            background: rgba(255, 255, 255, 0.95);
+            color: #b8860b;
+            padding-left: 25px;
+            border-left: 4px solid #b8860b;
+            box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu-container">
+    <a href="news\news.htm" target="_blank" class="menu-link">Новини</a>
+    <a href="menu\Бронювання\reservation.htm" target="_blank" class="menu-link">Онлайн бронювання</a>
+    <a href="menu\розклад\timetable.htm" target="_blank" class="menu-link">Розклад турів</a>
+    <a href="map\map.htm" target="_blank" class="menu-link">Карта</a>
+    <a href="menu\about us.htm" target="_blank" class="menu-link">Про нас</a>
+    <a href="menu\contact.htm" target="_blank" class="menu-link">Контакти</a>
+    <a href="menu\review.htm" target="_blank" class="menu-link">Відгуки</a>
+</div>
+
+</body>
+</html>

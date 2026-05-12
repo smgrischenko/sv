@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ІКАР ТУРИ — Головна</title>
+    <style>
+        /* Базові налаштування */
+        * { box-sizing: border-box; }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5; /* Світлий фон всієї сторінки */
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Обгортка сайту */
+        .site-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Шапка (Logo) */
+        header {
+            width: 100%;
+            height: 200px;
+            background-color: #fff;
+        }
+
+        /* Основний блок (Меню + Текст) */
+        .main-layout {
+            display: flex;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: flex-start; /* Щоб меню не розтягувалося вниз */
+        }
+
+        /* Бічна панель (Menu) */
+        .sidebar {
+            width: 300px;
+            padding: 20px;
+            position: sticky; /* Меню "плаває" при прокрутці */
+            top: 0;
+        }
+
+        .sidebar iframe {
+            width: 100%;
+            height: 500px; /* Висота вашого меню з картинкою */
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Центральна частина (Content) */
+        .content-box {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content-box iframe {
+            width: 100%;
+            min-height: 600px; /* Мінімальна висота */
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background-color: #cbdcf2; /* Колір як у вашому content.htm */
+        }
+
+        /* Новий сегмент "Продовження" */
+        .extra-section {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .extra-section h2 {
+            color: #b8860b;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .extra-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Нижня панель (Bottom) */
+        footer {
+            width: 100%;
+            height: 350px; /* Висота для карток статистики */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="site-wrapper">
+    <header>
+        <iframe src="logo.htm" scrolling="no"></iframe>
+    </header>
+
+    <div class="main-layout">
+        <aside class="sidebar">
+            <iframe src="menu.htm" scrolling="no"></iframe>
+        </aside>
+
+        <main class="content-box">
+            <iframe src="content.htm" name="A" id="contentFrame" scrolling="no" onload="adjustIframeHeight(this)"></iframe>
+        </main>
+    </div>
+
+    <section class="extra-section">
+        <h2>Відкривайте світ разом з "Ikar"</h2>
+        <p>
+            Ми пропонуємо не просто тури, а незабутні емоції. Наша команда працює цілодобово, 
+            щоб ваш відпочинок був комфортним, безпечним та сповненим яскравих вражень. 
+            Обирайте перевірену якість!
+        </p>
+    </section>
+
+    <footer>
+        <iframe src="bottom.htm" scrolling="no"></iframe>
+    </footer>
+</div>
+
+<script>
+    /* Скрипт для автоматичного підлаштування висоти іфрейма під текст */
+    function adjustIframeHeight(iframe) {
+        try {
+            var innerDoc = (iframe.contentDocument) ? iframe.contentDocument : iframe.contentWindow.document;
+            iframe.style.height = innerDoc.body.scrollHeight + 'px';
+        } catch (e) {
+            console.log("Неможливо змінити висоту іфрейма (можливо, через політику безпеки)");
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>bottom</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-image: url('turizm.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.9); /* Білий напівпрозорий фон */
+            border-radius: 15px; /* Закруглені кути */
+            padding: 25px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px); /* Ефект підстрибування при наведенні */
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #b8860b; /* DarkGoldenRod */
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-text {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="stats-container">
+    <div class="stat-card">
+        <span class="stat-number">Більше 10 000</span>
+        <span class="stat-icon">👍</span>
+        <span class="stat-text">позитивних відгуків від наших клієнтів!</span>
+    </div>
+
+    <div class="stat-card">
+        <span class="stat-number">100+</span>
+        <span class="stat-icon">🏔️</span>
+        <span class="stat-text">турів для найнезабутнішого відпочинку!</span>
+    </div>
+
+    <div class="stat-card">
+        <span class="stat-number">12 000</span>
+        <span class="stat-icon">👥</span>
+        <span class="stat-text">послуг надано</span>
+    </div>
+
+    <div class="stat-card">
+        <span class="stat-number">500</span>
+        <span class="stat-icon">✈️</span>
+        <span class="stat-text">турів у 2024 році</span>
+    </div>
+</div>
+
+</body>
+</html>
